@@ -1,0 +1,8 @@
+---
+const { subject, body, text } = Astro.props;
+const innerText = text ?? "live.culture.orders@gmail.com";
+---
+
+<a href={`mailto:live.culture.orders@gmail.com?subject=${subject}&body=${body}`}
+    ><strong>{innerText}</strong></a
+>

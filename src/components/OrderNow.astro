@@ -1,0 +1,12 @@
+---
+import Mailto from "./Mailto.astro";
+const { subject, body } = Astro.props;
+---
+
+<div class="mt-2 px-6 grid place-items-center">
+    <button
+        class="hover:bg-bread-600 text-bread-950 font-semibold py-2 px-4 border border-bread-950 hover:border-transparent rounded"
+    >
+        <Mailto body={body} subject={subject} text="Order now!" />
+    </button>
+</div>

@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import StarterImage from "../assets/starter.jpg";
+import KefirImage from "../assets/kefir.jpg";
+import KombuchaImage from "../assets/kombucha_scoby.png";
+import Mailto from "./Mailto.astro";
+import OrderNow from "./OrderNow.astro";
+---
+
+<main aria-labelledby="body" class="relative overflow-hidden">
+  <div class="relative mx-auto px-8 max-w-7xl lg:px-36 md:px-12">
+    <div
+      class="grid grid-cols-1 place-items-center gap-6 py-12 lg:gap-y-32 md:grid-cols-2 lg:grid-cols-2"
+    >
+      <figure
+        class="md:shadow-none sm:shadow-xl hover:shadow-xl py-5 rounded-3xl"
+      >
+        <Image
+          class="w-full rounded-t-3xl shadow-2xl"
+          src={StarterImage}
+          alt="sourdough starter"
+          width="1310"
+          height="873"
+        />
+        <div class="mt-4 flex justify-between px-6">
+          <div>
+            <p class="mt-1 text-lg leading-6 font-bold">Sourdough Starter</p>
+            <h3 class="text-sm text-bread-900">
+              This is our sourdough starter, it has been alive for the last 4
+              years, making beautifull and really tasting things like you can
+              see here.If you are interested on it, just send us an email to
+              <Mailto
+                body="Hi LiveCultures, I would like to order a bread starter. My contact details are: {contact details}. Delivery address: {address}"
+                subject="Order Bread Starter"
+              /> to organize the delivery to your place. We only do deliveries
+              around Hobart.
+            </h3>
+          </div>
+          <p class="text-base text-bread-950">$10</p>
+        </div>
+        <OrderNow
+          body="Hi LiveCultures, I would like to order kefir grains. My contact details are: {contact details}. Delivery address: {address}"
+          subject="Order Kefir Grains"
+        />
+      </figure>
+      <figure
+        class="md:shadow-none sm:shadow-xl hover:shadow-xl py-5 rounded-3xl"
+      >
+        <Image
+          class="w-full rounded-t-3xl shadow-2xl"
+          src={KefirImage}
+          alt="kefir"
+          width="1310"
+          height="873"
+        />
+        <div class="mt-4 flex justify-between px-6">
+          <div>
+            <p class="mt-1 text-lg font-bold leading-6">Kefir grains</p>
+            <h3 class="text-sm text-bread-900">
+              This is our other family member, it has been with us one year for
+              now and it is making delicious milk based kefir.If you are
+              interested on it, just send us an email to
+              <Mailto
+                body="Hi LiveCultures, I would like to order kefir grains. My contact details are: {contact details}. Delivery address: {address}"
+                subject="Order Kefir Grains"
+              />
+               to organize the delivery to your place. We only do deliveries
+              around Hobart.
+            </h3>
+          </div>
+          <p class="text-base text-bread-950">$15</p>
+        </div>
+        <OrderNow
+          body="Hi LiveCultures, I would like to order kefir grains. My contact details are: {contact details}. Delivery address: {address}"
+          subject="Order Kefir Grains"
+        />
+      </figure>
+      <figure
+        class="md:shadow-none sm:shadow-xl hover:shadow-xl py-5 rounded-3xl"
+      >
+        <Image
+          class="w-full rounded-t-3xl shadow-2xl"
+          src={KombuchaImage}
+          alt="kefir"
+          width="1310"
+          height="873"
+        />
+        <div class="mt-4 flex justify-between px-6">
+          <div>
+            <p class="mt-1 text-lg font-bold leading-6">Kombucha Scoby</p>
+            <h3 class="text-sm text-bread-900">Comming soon</h3>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</main>
