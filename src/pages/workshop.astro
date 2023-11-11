@@ -1,15 +1,38 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import QRImage from "../assets/livecultures.svg";
 ---
 
 <BaseLayout>
     <div
-        class="mx-auto w-96 flex shadow-2xl border border-bread-600 rounded-md"
+        class="mt-10 h-[40rem] p-5 mx-auto w-96 flex flex-wrap justify-between shadow-2xl border border-bread-600 rounded-md"
     >
         <div
             class="flex justify-center items-center rounded-full border h-12 w-12 border-solid border-bread-950"
         >
             <div>Free</div>
+        </div>
+        <h1 class="w-24 font-bold">Sourdough and Kefir Workshop</h1>
+        <h1 class="w-full text-center font-bold">Next 17/11/2023</h1>
+        <div class="w-full text-lg">What will you get?</div>
+        <ul class="text-sm list-disc px-5 mt-5">
+            <li>
+                Knowledge about how to feed and keep alive your kefir grains
+            </li>
+            <li>
+                Knowledge about how to feed and keep alive your sourdough
+                starter
+            </li>
+            <li>A taste of our last collected Kefir ( milk based )</li>
+            <li>A small home made bread using our sourdough starter</li>
+        </ul>
+        <div class="w-full mt-5">
+            <p>You don't have time to join us ?</p>
+            <p>Don't worry, check our content:</p>
+        </div>
+        <div class="justify-center w-full flex p-5">
+            <Image src={QRImage} alt="QR link" width="150" height="150" />
         </div>
     </div>
 </BaseLayout>
