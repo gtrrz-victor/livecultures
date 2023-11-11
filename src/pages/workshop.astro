@@ -6,16 +6,18 @@ import QRImage from "../assets/livecultures.svg";
 
 <BaseLayout>
     <div
-        class="mt-10 p-5 mx-auto w-96 flex flex-wrap justify-between shadow-2xl border border-bread-600 rounded-md"
+        class="mt-10 p-5 mx-auto w-96 flex flex-wrap shadow-2xl border border-bread-600 rounded-md"
     >
         <div
-            class="flex justify-center items-center rounded-full border h-12 w-12 border-solid border-bread-950"
+            style="position:relative;left:-40px"
+            class="flex flex-col text-center justify-center shadow-xl flex-wrap rounded-full h-24 w-24 bg-bread-950 text-bread-300 font-bold text-xl"
         >
-            <div>Free</div>
+            <span>Free</span>
+            <span>Workshop</span>
         </div>
-        <h1 class="w-24 font-bold">Sourdough and Kefir Workshop</h1>
-        <h1 class="w-full text-center font-bold">Next 17/11/2023</h1>
-        <div class="w-full text-lg">What will you get?</div>
+        <h1 class="w-36 font-bold pt-5">Sourdough and Kefir Workshop</h1>
+        <h1 class="w-full text-center font-bold pb-5">Next 19/11/2023</h1>
+        <div class="w-full text-lg">What would you get?</div>
         <ul class="text-sm list-disc px-5 mt-5">
             <li>
                 Knowledge about how to feed and keep alive your kefir grains
@@ -31,7 +33,7 @@ import QRImage from "../assets/livecultures.svg";
             <p>You don't have time to join us ?</p>
             <p>Don't worry, check our content:</p>
         </div>
-        <div class="justify-center w-full flex p-5">
+        <div class="justify-end w-full flex p-5">
             <Image src={QRImage} alt="QR link" width="150" height="150" />
         </div>
     </div>
