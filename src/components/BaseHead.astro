@@ -1,5 +1,11 @@
 ---
 import "../styles/global.css";
+
+declare global {
+    interface Window {
+        dataLayer: any;
+    }
+}
 ---
 
 <meta charset="utf-8" />
@@ -15,3 +21,16 @@ import "../styles/global.css";
     content="We sell live cultures to make at home bread, kefir or kombucha."
 />
 <title>Live Cultures</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3ESPZR6XKE"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(..._) {
+        window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-3ESPZR6XKE");
+</script>
